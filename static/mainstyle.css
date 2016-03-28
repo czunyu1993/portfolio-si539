@@ -1,0 +1,40 @@
+body {
+  background-color: #f2f2f2;
+}
+.nav {
+  background-color: #e6e6e6;
+  height: 60px;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.large-nav-ul {
+  list-style-type: disc;
+
+}
+.large-nav-ul > li {
+  text-align: center;
+  height: 60px;
+  width: 100px;
+  float: right;
+}
+.large-nav-ul > li > a {
+  color: #1aa3ff;
+}
+
+.large-nav-ul > li > a:hover {
+  background-color: #99ccff;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px){
+  #large-header, #mobile-header {
+    display: none;
+  }
+  #tablet-header {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 992px){
+
+}

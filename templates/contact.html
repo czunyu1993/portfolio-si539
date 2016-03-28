@@ -1,0 +1,15 @@
+{% extends "templates/base.html" %}
+
+{% block heading %}
+<h1>Zunyu Chen</h1>
+<h2>Login</h2>
+{% endblock %}
+
+{% block content %}
+<p>{{content}}</p>
+<form action = "/login" method = "post">
+	<label>username: <input type = "text" name = "name"></label><br>
+	<label>password: <input type = "password" name = "pw"></label><br>
+	<input type = "submit" value = "login">
+</form> 
+{% endblock %}
