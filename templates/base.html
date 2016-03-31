@@ -8,16 +8,21 @@
 
 	<!-- CSS -->
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 	<!-- Self designed CSS -->
 	<link rel="stylesheet" type="text/css" href="/static/mainstyle.css">
+	<!-- font -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
+	<link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
 
 	<!-- JavaScript -->
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="mainscript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="/static/mainscript.js"></script>
+	
 
 	
 </head>
@@ -39,59 +44,41 @@
 		
 		<nav class="nav">
 			<ul class="large-nav-ul">
-			  <li><a href="/contact.html">Contact</a></li>
-			  <li><a href="/project.html">Project</a></li>
-			  <li><a href="/course.html">Course</a></li>
-			  <li><a href="/index.html">Home</a></li>
+				<li id="nav-home"><a href="/index.html">Home</a></li>
+				<li id="nav-course"><a href="/course.html">Course</a></li>
+				<li id="nav-project"><a href="/project.html">Project</a></li>
+				<li id="nav-contact"><a href="/contact.html">Contact</a></li>
+
+				<style type="text/css">
+				{% if title_name == "HOME" %}
+					#nav-home {font-weight: bold; font-size: 120%;}
+				{% endif %}
+				{% if title_name == "COURSE" %}
+					#nav-course {font-weight: bold; font-size: 120%;}
+				{% endif %}
+				{% if title_name == "PROJECT" %}
+					#nav-project {font-weight: bold; font-size: 120%;}
+				{% endif %}
+				{% if title_name == "CONTACT" %}
+					#nav-contact {font-weight: bold; font-size: 120%;}
+				{% endif %}
+				</style>
 			</ul>
 		</nav>
-
-		{% block heading %}
-		Never see.
-		{% endblock %}
+		<div id="heading-content">
+			{% block heading %}
+			Never see.
+			{% endblock %}
+		</div>
 
 	</header>
 
 
-	<header id="tablet-header">
-		
-		<nav class="nav">
-			<ul class="tablet-nav-ul">
-			  <li><a href="/contact.html">Contact</a></li>
-			  <li><a href="/project.html">Project</a></li>
-			  <li><a href="/course.html">Course</a></li>
-			  <li><a href="/index.html">Home</a></li>
-			</ul>
-		</nav>
-
-		{% block heading %}
+	<div class="content">
+		{% block content %}
 		Never see.
 		{% endblock %}
-		
-	</header>
-
-
-	<header id="mobile-header">
-		
-		<nav class="nav">
-			<ul class="mobile-nav-ul">
-			  <li><a href="/contact.html">Contact</a></li>
-			  <li><a href="/project.html">Project</a></li>
-			  <li><a href="/course.html">Course</a></li>
-			  <li><a href="/index.html">Home</a></li>
-			</ul>
-		</nav>
-
-		{% block heading %}
-		Never see.
-		{% endblock %}
-		
-	</header>
-
-
-	{% block content %}
-	Never see.
-	{% endblock %}
+	</div>
 
 
 	<footer>

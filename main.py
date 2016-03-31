@@ -34,7 +34,7 @@ class MainHandler(webapp2.RequestHandler):
             filepath = '/index.html'
             titlename = 'home'
         else:
-            titlename = filepath[1:]
+            titlename = filepath[1:-5]
 
         # concatenate path string
         tempath = 'templates' + filepath
