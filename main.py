@@ -46,12 +46,12 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(tem.render({'title_name':titlename.upper()}))
 
 
-# "/","/index","/course","/project" use same handler
+# "/","/index","/hobby","/project" use same handler
 # "/login" uses its own handler
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/index.html', MainHandler),
-    ('/course.html', MainHandler),
+    ('/hobby.html', MainHandler),
     ('/project.html', MainHandler),
     ('/contact.html', MainHandler)
 ], debug=True)

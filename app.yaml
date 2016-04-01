@@ -11,6 +11,9 @@ handlers:
 - url: /img
   static_dir: img
 
+- url: /font-awesome-4.5.0
+  static_dir: font-awesome-4.5.0
+
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
