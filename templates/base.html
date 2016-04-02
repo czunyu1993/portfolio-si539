@@ -34,85 +34,112 @@
 <body>
 	<!-- Loading gif -->
 
-	<header id="large-header">
-		
-		<nav class="nav">
+	<header>
+	<div id="large-header">
+		<nav class="large-nav">
 			<ul class="large-nav-ul">
-				<li id="nav-home"><a href="/index.html">Home</a></li>
-				<li id="nav-hobby"><a href="/hobby.html">Hobby</a></li>
-				<li id="nav-project"><a href="/project.html">Project</a></li>
-				<li id="nav-contact"><a href="/contact.html">Contact</a></li>
+				<li id="large-nav-home"><a href="/index.html">Home</a></li>
+				<li id="large-nav-project"><a href="/project.html">Project</a></li>
+				<li id="large-nav-hobby"><a href="/hobby.html">Hobby</a></li>
+				<li id="large-nav-contact"><a href="/contact.html">Contact</a></li>
 
 				<style type="text/css">
 				{% if title_name == "HOME" %}
-					#nav-home {font-weight: bold; font-size: 120%;}
-				{% endif %}
-				{% if title_name == "HOBBY" %}
-					#nav-hobby {font-weight: bold; font-size: 120%;}
+					#large-nav-home {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
 				{% endif %}
 				{% if title_name == "PROJECT" %}
-					#nav-project {font-weight: bold; font-size: 120%;}
+					#large-nav-project {font-weight: bold; font-size: 120%; background-color: #4d4d4d}
+				{% endif %}
+				{% if title_name == "HOBBY" %}
+					#large-nav-hobby {font-weight: bold; font-size: 120%; background-color: #4d4d4d}
 				{% endif %}
 				{% if title_name == "CONTACT" %}
-					#nav-contact {font-weight: bold; font-size: 120%;}
+					#large-nav-contact {font-weight: bold; font-size: 120%; background-color: #4d4d4d}
 				{% endif %}
 				</style>
 			</ul>
 		</nav>
-		<div id="heading-content">
-			{% block heading %}
+		<div id="large-heading-content">
+			{% block large_heading %}
 			Never see.
 			{% endblock %}
 		</div>
-		
+	</div>
+
+	<div id="tablet-header">
+		<div id="tablet-heading-content">
+			{% block tablet_heading %}
+			Never see.
+			{% endblock %}
+		</div>
+		<nav class="tablet-nav">
+			<ul class="tablet-nav-ul">
+				<li id="tablet-nav-home"><a href="/index.html">Home</a></li>
+				<li id="tablet-nav-project"><a href="/project.html">Project</a></li>
+				<li id="tablet-nav-hobby"><a href="/hobby.html">Hobby</a></li>
+				<li id="tablet-nav-contact"><a href="/contact.html">Contact</a></li>
+
+				<style type="text/css">
+				{% if title_name == "HOME" %}
+					#tablet-nav-home {font-weight: bold; font-size: 120%;background-color: #4d4d4d}
+				{% endif %}
+				{% if title_name == "HOBBY" %}
+					#tablet-nav-hobby {font-weight: bold; font-size: 120%;background-color: #4d4d4d}
+				{% endif %}
+				{% if title_name == "PROJECT" %}
+					#tablet-nav-project {font-weight: bold; font-size: 120%;background-color: #4d4d4d}
+				{% endif %}
+				{% if title_name == "CONTACT" %}
+					#tablet-nav-contact {font-weight: bold; font-size: 120%;background-color: #4d4d4d}
+				{% endif %}
+				</style>
+			</ul>
+		</nav>
+	</div>
+
+	<div id="mobile-header">
+		<nav class="mobile-nav">
+			<ul class="mobile-nav-ul">
+				<li id="mobile-nav-home"><a href="/index.html">Home</a></li>
+				<li id="mobile-nav-project"><a href="/project.html">Project</a></li>
+				<li id="mobile-nav-hobby"><a href="/hobby.html">Hobby</a></li>
+				<li id="mobile-nav-contact"><a href="/contact.html">Contact</a></li>
+
+				<style type="text/css">
+				{% if title_name == "HOME" %}
+					#mobile-nav-home {font-weight: bold; font-size: 120%;}
+				{% endif %}
+				{% if title_name == "HOBBY" %}
+					#mobile-nav-hobby {font-weight: bold; font-size: 120%;}
+				{% endif %}
+				{% if title_name == "PROJECT" %}
+					#mobile-nav-project {font-weight: bold; font-size: 120%;}
+				{% endif %}
+				{% if title_name == "CONTACT" %}
+					#mobile-nav-contact {font-weight: bold; font-size: 120%;}
+				{% endif %}
+				</style>
+			</ul>
+		</nav>
+		<div id="tablet-heading-content">
+			{% block mobile_heading %}
+			Never see.
+			{% endblock %}
+		</div>
+	</div>
 
 	</header>
 
-	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-		</ol>
-
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner">
-			<div class="item active">
-				<img src="/img/Planet_scenery.png" alt="...">
-				<div class="carousel-caption">
-						<!-- <h3>Caption Text</h3> -->
-				</div>
-			</div>
-			<div class="item">
-				<img src="/img/Planet_scenery.png" alt="...">
-				<div class="carousel-caption">
-						<!-- <h3>Caption Text</h3> -->
-				</div>
-			</div>
-			<div class="item">
-				<img src="/img/Planet_scenery.png" alt="...">
-				<div class="carousel-caption">
-						<!-- <h3>Caption Text</h3> -->
-				</div>
-			</div>
-		</div>
-
-		<!-- Controls -->
-		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-		</a>
-		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-		</a>
-	</div>
+	{% block carousel %}
+	Never see.
+	{% endblock %}
 	
 	<div class="content">
-		
 
 		{% block content %}
 		Never see.
 		{% endblock %}
+		
 	</div>
 
 

@@ -1,9 +1,20 @@
 {% extends "templates/base.html" %}
 
-{% block heading %}
+{% block large_heading %}
 <h2>Hobby</h2>
 {% endblock %}
 
+{% block tablet_heading %}
+<h1>Hi, I am <span id="myname">Zunyu Chen</span></h1>
+{% endblock %}
+
+{% block mobile_heading %}
+<h1>Hi, I am <span id="myname">Zunyu Chen</span></h1>
+<p id="index-self-intro">I am current a Master student in Electrical and Computer Engineering at University of Michigan.</p>
+{% endblock %}
+
+{% block carousel %}
+{% endblock %}
 
 {% block content %}
 <p>These are some hobby:</p>
