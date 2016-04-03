@@ -1,7 +1,10 @@
 {% extends "templates/base.html" %}
 
 {% block large_heading %}
-<h2>Project</h2>
+<h1>Project</h1>
+<style type="text/css">
+h1 {margin: 60px;}
+</style>
 {% endblock %}
 
 {% block tablet_heading %}
@@ -10,13 +13,13 @@
 
 {% block mobile_heading %}
 <h1>Hi, I am <span id="myname">Zunyu Chen</span></h1>
-<p id="index-self-intro">I am current a Master student in Electrical and Computer Engineering at University of Michigan.</p>
 {% endblock %}
 
-{% block carousel %}
+{% block large_carousel %}
 {% endblock %}
 
 {% block content %}
+<div class="project-content">
 <p>These are some projects I did:</p>
 <ul>
 	<li>Text Retrieval System Based on Vector Space Model</li>
@@ -37,4 +40,5 @@
 		<li>Implemented 4 kinds of priority queue to satisfy different runtime requirement.</li>
 	</ul><br>
 </ul>
+</div>
 {% endblock %}

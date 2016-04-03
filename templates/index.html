@@ -1,98 +1,79 @@
 {% extends "templates/base.html" %}
 
+
 {% block large_heading %}
 <h1>Hi, I am <span id="myname">Zunyu Chen</span></h1>
 <p id="index-self-intro">I am current a Master student in Electrical and Computer Engineering at University of Michigan.</p>
 {% endblock %}
 
+
 {% block tablet_heading %}
 <h1>Hi, I am <span id="myname">Zunyu Chen</span></h1>
 {% endblock %}
 
+
 {% block mobile_heading %}
 <h1>Hi, I am <span id="myname">Zunyu Chen</span></h1>
-<p id="index-self-intro">I am current a Master student in Electrical and Computer Engineering at University of Michigan.</p>
 {% endblock %}
 
-{% block carousel %}
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-	<!-- Indicators -->
+
+{% block large_carousel %}
+<div id="large-carouse" class="carousel slide" data-ride="carousel">
+
 	<ol class="carousel-indicators">
-		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		<li data-target="#large-carouse" data-slide-to="0" class="active"></li>
+		<li data-target="#large-carouse" data-slide-to="1"></li>
+		<li data-target="#large-carouse" data-slide-to="2"></li>
 	</ol>
 
-	<!-- Wrapper for slides -->
 	<div class="carousel-inner" id="carousel-inner-large">
 		<div class="item active">
 			<img src="/img/Planet_scenery.png" alt="...">
-			<div class="carousel-caption">
-					<!-- <h3>Caption Text</h3> -->
-			</div>
 		</div>
 		<div class="item">
 			<img src="/img/Planet_scenery.png" alt="...">
-			<div class="carousel-caption">
-					<!-- <h3>Caption Text</h3> -->
-			</div>
 		</div>
 		<div class="item">
 			<img src="/img/Planet_scenery.png" alt="...">
-			<div class="carousel-caption">
-					<!-- <h3>Caption Text</h3> -->
-			</div>
 		</div>
 	</div>
 
 	<!-- Controls -->
-	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	<a class="left carousel-control" href="#large-carouse" role="button" data-slide="prev">
 		<span class="glyphicon glyphicon-chevron-left"></span>
 	</a>
-	<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	<a class="right carousel-control" href="#large-carouse" role="button" data-slide="next">
 		<span class="glyphicon glyphicon-chevron-right"></span>
 	</a>
 </div>
 {% endblock %}
 
-{% block content %}
 
-<section class="col-sm-5" id="tablet-self-intro">
+{% block content %}
+<section id="tablet-self-intro" class="col-sm-5">
 	<p>I am current a Master student in Electrical and Computer Engineering at University of Michigan.</p>
 </section>
 
-
 <section id="tablet-carousel" class="carousel slide" data-ride="carousel">
-	<!-- Indicators -->
+
 	<ol class="carousel-indicators">
 		<li data-target="#tablet-carousel" data-slide-to="0" class="active"></li>
 		<li data-target="#tablet-carousel" data-slide-to="1"></li>
 		<li data-target="#tablet-carousel" data-slide-to="2"></li>
 	</ol>
 
-	<!-- Wrapper for slides -->
 	<div class="carousel-inner" id="carousel-inner-tablet">
 		<div class="item active">
 			<img src="/img/Planet_scenery.png" alt="..." class="tablet-carousel-img">
-			<div class="carousel-caption">
-					<!-- <h3>Caption Text</h3> -->
-			</div>
 		</div>
 		<div class="item">
 			<img src="/img/Planet_scenery.png" alt="..." class="tablet-carousel-img">
-			<div class="carousel-caption">
-					<!-- <h3>Caption Text</h3> -->
-			</div>
 		</div>
 		<div class="item">
 			<img src="/img/Planet_scenery.png" alt="..." class="tablet-carousel-img">
-			<div class="carousel-caption">
-					<!-- <h3>Caption Text</h3> -->
-			</div>
 		</div>
 	</div>
 
-	<!-- Controls -->
 	<a class="left carousel-control" href="#tablet-carousel" role="button" data-slide="prev">
 		<span class="glyphicon glyphicon-chevron-left"></span>
 	</a>
@@ -101,20 +82,9 @@
 	</a>
 </section>
 
-<p>Welcome to my website!</p>
-<p>Welcome to my website!</p>
-<p>Welcome to my website!</p>
-<p>Welcome to my website!</p>
-<p>Welcome to my website!</p>
-<p>Welcome to my website!</p>
-<p>Welcome to my website!</p>
-<p>Welcome to my website!</p>
-<p>Welcome to my website!</p>
-<p>Welcome to my website!</p>
-<p>Welcome to my website!</p>
-<p>Welcome to my website!</p>
-<p>Welcome to my website!</p>
-<p>Welcome to my website!</p>
-<p>Welcome to my website!</p>
+<div class="home-content">
+<br><br><br>
+<p>Welcome to my website!</p><br>
 <p>This is Zunyu Chen. I am a current master student in Electrical and Computer Engineering at University of Michigan.</p>
+</div>
 {% endblock %}

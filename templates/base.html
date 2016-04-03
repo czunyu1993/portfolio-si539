@@ -25,112 +25,116 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/static/mainscript.js"></script>
-
-	
-
 	
 </head>
 
 <body>
-	<!-- Loading gif -->
 
 	<header>
-	<div id="large-header">
-		<nav class="large-nav">
-			<ul class="large-nav-ul">
-				<li id="large-nav-home"><a href="/index.html">Home</a></li>
-				<li id="large-nav-project"><a href="/project.html">Project</a></li>
-				<li id="large-nav-hobby"><a href="/hobby.html">Hobby</a></li>
-				<li id="large-nav-contact"><a href="/contact.html">Contact</a></li>
 
-				<style type="text/css">
-				{% if title_name == "HOME" %}
-					#large-nav-home {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
-				{% endif %}
-				{% if title_name == "PROJECT" %}
-					#large-nav-project {font-weight: bold; font-size: 120%; background-color: #4d4d4d}
-				{% endif %}
-				{% if title_name == "HOBBY" %}
-					#large-nav-hobby {font-weight: bold; font-size: 120%; background-color: #4d4d4d}
-				{% endif %}
-				{% if title_name == "CONTACT" %}
-					#large-nav-contact {font-weight: bold; font-size: 120%; background-color: #4d4d4d}
-				{% endif %}
-				</style>
-			</ul>
-		</nav>
-		<div id="large-heading-content">
-			{% block large_heading %}
-			Never see.
-			{% endblock %}
+		<div id="large-header">
+			<nav class="large-nav">
+				<ul class="large-nav-ul">
+					<li id="large-nav-home"><a href="/index.html">Home</a></li>
+					<li id="large-nav-project"><a href="/project.html">Project</a></li>
+					<li id="large-nav-hobby"><a href="/hobby.html">Hobby</a></li>
+					<li id="large-nav-contact"><a href="/contact.html">Contact</a></li>
+
+					<style type="text/css">
+					{% if title_name == "HOME" %}
+						#large-nav-home {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
+					{% endif %}
+					{% if title_name == "PROJECT" %}
+						#large-nav-project {font-weight: bold; font-size: 120%; background-color: #4d4d4d}
+					{% endif %}
+					{% if title_name == "HOBBY" %}
+						#large-nav-hobby {font-weight: bold; font-size: 120%; background-color: #4d4d4d}
+					{% endif %}
+					{% if title_name == "CONTACT" %}
+						#large-nav-contact {font-weight: bold; font-size: 120%; background-color: #4d4d4d}
+					{% endif %}
+					</style>
+				</ul>
+			</nav>
+			<div id="large-heading-content">
+				{% block large_heading %}
+				Never see.
+				{% endblock %}
+			</div>
 		</div>
-	</div>
 
-	<div id="tablet-header">
-		<div id="tablet-heading-content">
-			{% block tablet_heading %}
-			Never see.
-			{% endblock %}
+		<div id="tablet-header">
+			<div id="tablet-heading-content">
+				{% block tablet_heading %}
+				Never see.
+				{% endblock %}
+			</div>
+			<nav class="tablet-nav">
+				<ul class="tablet-nav-ul">
+					<li id="tablet-nav-home"><a href="/index.html">Home</a></li>
+					<li id="tablet-nav-project"><a href="/project.html">Project</a></li>
+					<li id="tablet-nav-hobby"><a href="/hobby.html">Hobby</a></li>
+					<li id="tablet-nav-contact"><a href="/contact.html">Contact</a></li>
+
+					<style type="text/css">
+					{% if title_name == "HOME" %}
+						#tablet-nav-home {font-weight: bold; font-size: 120%;background-color: #4d4d4d}
+					{% endif %}
+					{% if title_name == "HOBBY" %}
+						#tablet-nav-hobby {font-weight: bold; font-size: 120%;background-color: #4d4d4d}
+					{% endif %}
+					{% if title_name == "PROJECT" %}
+						#tablet-nav-project {font-weight: bold; font-size: 120%;background-color: #4d4d4d}
+					{% endif %}
+					{% if title_name == "CONTACT" %}
+						#tablet-nav-contact {font-weight: bold; font-size: 120%;background-color: #4d4d4d}
+					{% endif %}
+					</style>
+				</ul>
+			</nav>
 		</div>
-		<nav class="tablet-nav">
-			<ul class="tablet-nav-ul">
-				<li id="tablet-nav-home"><a href="/index.html">Home</a></li>
-				<li id="tablet-nav-project"><a href="/project.html">Project</a></li>
-				<li id="tablet-nav-hobby"><a href="/hobby.html">Hobby</a></li>
-				<li id="tablet-nav-contact"><a href="/contact.html">Contact</a></li>
 
-				<style type="text/css">
-				{% if title_name == "HOME" %}
-					#tablet-nav-home {font-weight: bold; font-size: 120%;background-color: #4d4d4d}
-				{% endif %}
-				{% if title_name == "HOBBY" %}
-					#tablet-nav-hobby {font-weight: bold; font-size: 120%;background-color: #4d4d4d}
-				{% endif %}
-				{% if title_name == "PROJECT" %}
-					#tablet-nav-project {font-weight: bold; font-size: 120%;background-color: #4d4d4d}
-				{% endif %}
-				{% if title_name == "CONTACT" %}
-					#tablet-nav-contact {font-weight: bold; font-size: 120%;background-color: #4d4d4d}
-				{% endif %}
-				</style>
-			</ul>
-		</nav>
-	</div>
+		<div id="mobile-header">
 
-	<div id="mobile-header">
-		<nav class="mobile-nav">
-			<ul class="mobile-nav-ul">
-				<li id="mobile-nav-home"><a href="/index.html">Home</a></li>
-				<li id="mobile-nav-project"><a href="/project.html">Project</a></li>
-				<li id="mobile-nav-hobby"><a href="/hobby.html">Hobby</a></li>
-				<li id="mobile-nav-contact"><a href="/contact.html">Contact</a></li>
+			<div id="mobile-heading-content">
+				{% block mobile_heading %}
+				Never see.
+				{% endblock %}
+			</div>
 
-				<style type="text/css">
-				{% if title_name == "HOME" %}
-					#mobile-nav-home {font-weight: bold; font-size: 120%;}
-				{% endif %}
-				{% if title_name == "HOBBY" %}
-					#mobile-nav-hobby {font-weight: bold; font-size: 120%;}
-				{% endif %}
-				{% if title_name == "PROJECT" %}
-					#mobile-nav-project {font-weight: bold; font-size: 120%;}
-				{% endif %}
-				{% if title_name == "CONTACT" %}
-					#mobile-nav-contact {font-weight: bold; font-size: 120%;}
-				{% endif %}
-				</style>
-			</ul>
-		</nav>
-		<div id="tablet-heading-content">
-			{% block mobile_heading %}
-			Never see.
-			{% endblock %}
+			<div class="dropdown">
+			  <img onclick="myFunction()" src="/img/nav-icon.png" class="dropbtn" id="dropdownbtn">
+			  <div id="myDropdown" class="dropdown-content">
+				<ul class="mobile-nav-ul">
+					<li id="mobile-nav-home"><a href="/index.html">Home</a></li>
+					<li id="mobile-nav-project"><a href="/project.html">Project</a></li>
+					<li id="mobile-nav-hobby"><a href="/hobby.html">Hobby</a></li>
+					<li id="mobile-nav-contact"><a href="/contact.html">Contact</a></li>
+
+					<style type="text/css">
+					{% if title_name == "HOME" %}
+						#mobile-nav-home {font-weight: bold; font-size: 120%;}
+					{% endif %}
+					{% if title_name == "HOBBY" %}
+						#mobile-nav-hobby {font-weight: bold; font-size: 120%;}
+					{% endif %}
+					{% if title_name == "PROJECT" %}
+						#mobile-nav-project {font-weight: bold; font-size: 120%;}
+					{% endif %}
+					{% if title_name == "CONTACT" %}
+						#mobile-nav-contact {font-weight: bold; font-size: 120%;}
+					{% endif %}
+					</style>
+				</ul>
+			  </div>
+			</div>
+
+			<div class="black-line"></div>
 		</div>
-	</div>
 
 	</header>
 
-	{% block carousel %}
+	{% block large_carousel %}
 	Never see.
 	{% endblock %}
 	
@@ -146,26 +150,10 @@
 	<footer>
 		<div class="footer-media">
 			<ul>
-				<li>
-					<a class="btn btn-social-icon btn-facebook">
-    					<i class="fa fa-facebook"></i>
-  					</a>
-				</li>
-				<li>
-					<a class="btn btn-social-icon btn-linkedin">
-    					<i class="fa fa-linkedin"></i>
-  					</a>
-				</li>
-				<li>
-					<a class="btn btn-social-icon btn-twitter">
-    					<i class="fa fa-twitter"></i>
-  					</a>
-				</li>
-				<li>
-					<a class="btn btn-social-icon btn-github">
-    					<i class="fa fa-github"></i>
-  					</a>
-				</li>
+				<li><a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a></li>
+				<li><a class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a></li>
+				<li><a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a></li>
+				<li><a class="btn btn-social-icon btn-github"><i class="fa fa-github"></i></a></li>
 			</ul>
 		</div>
 		<p class="copyright">Copyright &copy; Zunyu Chen</p>
