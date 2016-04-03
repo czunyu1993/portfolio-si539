@@ -38,24 +38,10 @@
 					<li id="large-nav-home"><a href="/index.html">Home</a></li>
 					<li id="large-nav-project"><a href="/project.html">Project</a></li>
 					<li id="large-nav-hobby"><a href="/hobby.html">Hobby</a></li>
-					<li id="large-nav-contact"><a href="/contact.html">Contact</a></li>
-
-					<style type="text/css">
-					{% if title_name == "HOME" %}
-						#large-nav-home {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
-					{% endif %}
-					{% if title_name == "PROJECT" %}
-						#large-nav-project {font-weight: bold; font-size: 120%; background-color: #4d4d4d}
-					{% endif %}
-					{% if title_name == "HOBBY" %}
-						#large-nav-hobby {font-weight: bold; font-size: 120%; background-color: #4d4d4d}
-					{% endif %}
-					{% if title_name == "CONTACT" %}
-						#large-nav-contact {font-weight: bold; font-size: 120%; background-color: #4d4d4d}
-					{% endif %}
-					</style>
+					<li id="large-nav-contact"><a href="/contact.html">Contact</a></li>			
 				</ul>
 			</nav>
+			
 			<div id="large-heading-content">
 				{% block large_heading %}
 				Never see.
@@ -75,21 +61,6 @@
 					<li id="tablet-nav-project"><a href="/project.html">Project</a></li>
 					<li id="tablet-nav-hobby"><a href="/hobby.html">Hobby</a></li>
 					<li id="tablet-nav-contact"><a href="/contact.html">Contact</a></li>
-
-					<style type="text/css">
-					{% if title_name == "HOME" %}
-						#tablet-nav-home {font-weight: bold; font-size: 120%;background-color: #4d4d4d}
-					{% endif %}
-					{% if title_name == "HOBBY" %}
-						#tablet-nav-hobby {font-weight: bold; font-size: 120%;background-color: #4d4d4d}
-					{% endif %}
-					{% if title_name == "PROJECT" %}
-						#tablet-nav-project {font-weight: bold; font-size: 120%;background-color: #4d4d4d}
-					{% endif %}
-					{% if title_name == "CONTACT" %}
-						#tablet-nav-contact {font-weight: bold; font-size: 120%;background-color: #4d4d4d}
-					{% endif %}
-					</style>
 				</ul>
 			</nav>
 		</div>
@@ -103,36 +74,44 @@
 			</div>
 
 			<div class="dropdown">
-			  <img onclick="myFunction()" src="/img/nav-icon.png" class="dropbtn" id="dropdownbtn">
+			  <img onclick="myFunction()" src="/img/nav-icon.png" class="dropbtn" id="dropdownbtn" alt="nav-button">
 			  <div id="myDropdown" class="dropdown-content">
 				<ul class="mobile-nav-ul">
 					<li id="mobile-nav-home"><a href="/index.html">Home</a></li>
 					<li id="mobile-nav-project"><a href="/project.html">Project</a></li>
 					<li id="mobile-nav-hobby"><a href="/hobby.html">Hobby</a></li>
 					<li id="mobile-nav-contact"><a href="/contact.html">Contact</a></li>
-
-					<style type="text/css">
-					{% if title_name == "HOME" %}
-						#mobile-nav-home {font-weight: bold; font-size: 120%;}
-					{% endif %}
-					{% if title_name == "HOBBY" %}
-						#mobile-nav-hobby {font-weight: bold; font-size: 120%;}
-					{% endif %}
-					{% if title_name == "PROJECT" %}
-						#mobile-nav-project {font-weight: bold; font-size: 120%;}
-					{% endif %}
-					{% if title_name == "CONTACT" %}
-						#mobile-nav-contact {font-weight: bold; font-size: 120%;}
-					{% endif %}
-					</style>
 				</ul>
 			  </div>
 			</div>
-
 			<div class="black-line"></div>
 		</div>
 
 	</header>
+	<div>
+		<style type="text/css" scoped>
+		{% if title_name == "HOME" %}
+			#large-nav-home {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
+			#tablet-nav-home {font-weight: bold; font-size: 120%;background-color: #4d4d4d;}
+			#mobile-nav-home {font-weight: bold; font-size: 120%;}
+		{% endif %}
+		{% if title_name == "PROJECT" %}
+			#large-nav-project {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
+			#tablet-nav-hobby {font-weight: bold; font-size: 120%;background-color: #4d4d4d;}
+			#mobile-nav-hobby {font-weight: bold; font-size: 120%;}
+		{% endif %}
+		{% if title_name == "HOBBY" %}
+			#large-nav-hobby {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
+			#tablet-nav-project {font-weight: bold; font-size: 120%;background-color: #4d4d4d;}
+			#mobile-nav-project {font-weight: bold; font-size: 120%;}
+		{% endif %}
+		{% if title_name == "CONTACT" %}
+			#large-nav-contact {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
+			#tablet-nav-contact {font-weight: bold; font-size: 120%;background-color: #4d4d4d;}
+			#mobile-nav-contact {font-weight: bold; font-size: 120%;}
+		{% endif %}
+		</style>
+	</div>
 
 	{% block large_carousel %}
 	Never see.

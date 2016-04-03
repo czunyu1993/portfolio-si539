@@ -2,18 +2,18 @@
 
 
 {% block large_heading %}
-<h1>Hi, I am <span id="myname">Zunyu Chen</span></h1>
+<h1>Hi, I am <span class="myname">Zunyu Chen</span></h1>
 <p id="index-self-intro">I am current a Master student in Electrical and Computer Engineering at University of Michigan.</p>
 {% endblock %}
 
 
 {% block tablet_heading %}
-<h1>Hi, I am <span id="myname">Zunyu Chen</span></h1>
+<h1>Hi, I am <span class="myname">Zunyu Chen</span></h1>
 {% endblock %}
 
 
 {% block mobile_heading %}
-<h1>Hi, I am <span id="myname">Zunyu Chen</span></h1>
+<h1>Hi, I am <span class="myname">Zunyu Chen</span></h1>
 {% endblock %}
 
 
@@ -50,11 +50,11 @@
 
 
 {% block content %}
-<section id="tablet-self-intro" class="col-sm-5">
+<div id="tablet-self-intro" class="col-sm-5">
 	<p>I am current a Master student in Electrical and Computer Engineering at University of Michigan.</p>
-</section>
+</div>
 
-<section id="tablet-carousel" class="carousel slide" data-ride="carousel">
+<div id="tablet-carousel" class="carousel slide" data-ride="carousel">
 
 	<ol class="carousel-indicators">
 		<li data-target="#tablet-carousel" data-slide-to="0" class="active"></li>
@@ -80,11 +80,11 @@
 	<a class="right carousel-control" href="#tablet-carousel" role="button" data-slide="next">
 		<span class="glyphicon glyphicon-chevron-right"></span>
 	</a>
-</section>
+</div>
 
 <div class="home-content">
 <p><br>Welcome to my website!<br><br></p>
-<p align="center"><img id="self-mobile" src="/img/self-mobile.png"><br></p>
+<p class="self-mobile-p"><img id="self-mobile" src="/img/self-mobile.png" alt="photo-of-myself"><br></p>
 <p>This is Zunyu Chen. I am a current master student in Electrical and Computer Engineering at University of Michigan.<br><br></p>
 </div>
 {% endblock %}
