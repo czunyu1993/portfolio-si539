@@ -1,25 +1,44 @@
 {% extends "templates/base.html" %}
 
 {% block large_heading %}
-<h2>Login</h2>
+<h1>Contact</h1>
+<style type="text/css">
+h1 {margin: 60px;}
+</style>
 {% endblock %}
 
 {% block tablet_heading %}
-<h1>Hi, I am <span id="myname">Zunyu Chen</span></h1>
+<h1>Contact</h1>
 {% endblock %}
 
 {% block mobile_heading %}
-<h1>Hi, I am <span id="myname">Zunyu Chen</span></h1>
+<h1>Contact</h1>
 {% endblock %}
 
 {% block large_carousel %}
 {% endblock %}
 
 {% block content %}
-<p>{{content}}</p>
-<form action = "/login" method = "post">
-	<label>username: <input type = "text" name = "name"></label><br>
-	<label>password: <input type = "password" name = "pw"></label><br>
-	<input type = "submit" value = "login">
-</form> 
+
+<div class="contact-content">
+	<p id="contact-welcome">Talk with me!</p>
+	<div id="contact-info">
+		<p>1423 McIntyre Street</p>
+		<p>Ann Arbor, Michigan</p>
+		<p>(+1)734-660-8469</p>
+		<p>czunyu@umich.edu</p>
+	
+		<form action = "/login" method = "post">
+			<label>Your name: <input type = "text" name = "name"></label><br>
+			<label>Message: <input type = "text" name = "pw"></label><br>
+			<input type = "submit" value = "Send email to me!">
+		</form> 
+	</div>
+	<div class="mylocation">
+		<p>Home location</p>
+		<div id="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.048942400471!2d-83.71221887120117!3d42.29882109575965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883cae82ce1476a3%3A0x315ce8775eb31864!2s1423+McIntyre+St%2C+Ann+Arbor%2C+MI+48105!5e0!3m2!1szh-CN!2sus!4v1459651686805" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
 {% endblock %}
