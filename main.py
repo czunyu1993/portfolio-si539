@@ -46,6 +46,19 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(tem.render({'title_name':titlename.upper()}))
 
 
+    def post(self):
+        
+        visitor = self.request.get('name')
+        email = self.request.get('email')
+        mesg = self.request.get('message')
+
+        # Sorry I cannot find how to send email to myself...
+
+        tempath = 'templates/contact.html'
+        tem = JINJA_ENVIRONMENT.get_template(tempath)
+        self.response.write(tem.render({'title_name':'CONTACT'}))
+
+
 # "/","/index","/hobby","/project" use same handler
 # "/login" uses its own handler
 app = webapp2.WSGIApplication([

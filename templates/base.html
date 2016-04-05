@@ -15,22 +15,32 @@
 	<link rel="stylesheet" type="text/css" href="/static/mainstyle.css">
 	<!-- font -->
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
-	<link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Parisienne'>
+	<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Lora'>
 	<link rel="stylesheet" href="/font-awesome-4.5.0/css/font-awesome.min.css">
+	<!-- icon -->
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
-	<!-- JavaScript -->
+	<!-- JavaScript & JQuery -->
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<!-- Self designed JavaScript & JQuery -->
 	<script type="text/javascript" src="/static/mainscript.js"></script>
-	
+	<script type="text/javascript">
+		window.onload = function() {
+			document.getElementById("loadingpage").style.display = "none";
+	}
+	</script>
 </head>
 
 <body>
 
 	<header>
+
+		<div id="loadingpage">
+			<img id="loading-image" src="/img/load.gif" alt="Loading..." />
+		</div>
 
 		<div id="large-header">
 			<nav class="large-nav">
@@ -92,23 +102,23 @@
 		<style type="text/css" scoped>
 		{% if title_name == "HOME" %}
 			#large-nav-home {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
-			#tablet-nav-home {font-weight: bold; font-size: 120%;background-color: #4d4d4d;}
-			#mobile-nav-home {font-weight: bold; font-size: 120%;}
+			#tablet-nav-home {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
+			#mobile-nav-home {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
 		{% endif %}
 		{% if title_name == "PROJECT" %}
 			#large-nav-project {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
-			#tablet-nav-hobby {font-weight: bold; font-size: 120%;background-color: #4d4d4d;}
-			#mobile-nav-hobby {font-weight: bold; font-size: 120%;}
+			#tablet-nav-project {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
+			#mobile-nav-project {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
 		{% endif %}
 		{% if title_name == "HOBBY" %}
 			#large-nav-hobby {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
-			#tablet-nav-project {font-weight: bold; font-size: 120%;background-color: #4d4d4d;}
-			#mobile-nav-project {font-weight: bold; font-size: 120%;}
+			#tablet-nav-hobby {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
+			#mobile-nav-hobby {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
 		{% endif %}
 		{% if title_name == "CONTACT" %}
 			#large-nav-contact {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
-			#tablet-nav-contact {font-weight: bold; font-size: 120%;background-color: #4d4d4d;}
-			#mobile-nav-contact {font-weight: bold; font-size: 120%;}
+			#tablet-nav-contact {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
+			#mobile-nav-contact {font-weight: bold; font-size: 120%; background-color: #4d4d4d;}
 		{% endif %}
 		</style>
 	</div>
@@ -129,10 +139,30 @@
 	<footer>
 		<div class="footer-media">
 			<ul>
-				<li><a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a></li>
-				<li><a class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a></li>
-				<li><a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a></li>
-				<li><a class="btn btn-social-icon btn-github"><i class="fa fa-github"></i></a></li>
+				<li>
+					<a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/profile.php?id=100009884918442" title="facebook" target="_blank">
+						<i class="fa fa-facebook"></i>
+						<p class="musthidden">facebook</p>
+					</a>
+				</li>
+				<li>
+					<a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/zunyu-chen-2273a0ab" title="linkedin" target="_blank">
+						<i class="fa fa-linkedin"></i>
+						<p class="musthidden">linkedin</p>
+					</a>
+				</li>
+				<li>
+					<a class="btn btn-social-icon btn-twitter" href="https://twitter.com/CZunyu" title="twitter" target="_blank">
+						<i class="fa fa-twitter" title="twitter"></i>
+						<p class="musthidden">twitter</p>
+					</a>
+				</li>
+				<li>
+					<a class="btn btn-social-icon btn-github" href="https://github.com/czunyu1993" title="github" target="_blank">
+						<i class="fa fa-github"></i>
+						<p class="musthidden">github</p>
+					</a>
+				</li>
 			</ul>
 		</div>
 		<p class="copyright">Copyright &copy; Zunyu Chen</p>

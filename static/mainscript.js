@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
 	$( "html" ).removeClass( "loading" );
-	$("#large-nav-home > a, #large-nav-project > a, #large-nav-hobby > a, #large-nav-contact > a").hover(
+	$(".large-nav-ul > li > a, .tablet-nav-ul > li > a, .mobile-nav-ul > li > a").hover(
 		
 		function() {
 			$(this).parent().css('background-color', '#d9d9d9');
@@ -22,11 +22,11 @@ $(document).ready(function() {
 
 	$(".hobbyimg").mouseenter(function() {
 		$(this).css('opacity', '0.3');
-		$(this).siblings(".imginfo").show();
+		$(this).siblings(".imginfo").fadeIn();
 	});
 	$(".hobbyimg").mouseleave(function() {
 		$(this).css('opacity', '1');
-		$(this).siblings(".imginfo").hide();
+		$(this).siblings(".imginfo").fadeOut();
 	});
 
 });

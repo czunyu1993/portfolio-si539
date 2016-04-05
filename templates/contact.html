@@ -1,10 +1,7 @@
 {% extends "templates/base.html" %}
 
 {% block large_heading %}
-<h1>Contact</h1>
-<style type="text/css">
-h1 {margin: 60px;}
-</style>
+<h1 class="needmargin">Contact</h1>
 {% endblock %}
 
 {% block tablet_heading %}
@@ -21,23 +18,26 @@ h1 {margin: 60px;}
 {% block content %}
 
 <div class="contact-content">
-	<p id="contact-welcome">Talk with me!</p>
 	<div id="contact-info">
-		<p>1423 McIntyre Street</p>
-		<p>Ann Arbor, Michigan</p>
-		<p>(+1)734-660-8469</p>
-		<p>czunyu@umich.edu</p>
+		<p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>1423 McIntyre Street</p>
+		<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ann Arbor, Michigan</p>
+		<p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>(+1)734-660-8469</p>
+		<p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>czunyu@umich.edu</p>
+		<br>
 	
-		<form action = "/login" method = "post">
-			<label>Your name: <input type = "text" name = "name"></label><br>
-			<label>Message: <input type = "text" name = "pw"></label><br>
+		<form id="usrform" action = "/contact.html" method = "post">
+			<label id="yourname">Your name: <input type = "text" name = "name"></label><br>
+			<label id="yourmail">Your email: <input type = "text" name = "email"></label><br>
+			<label id="yourmesg">Your message: 
+				<textarea rows="8" cols="19" name="message" form="usrform"></textarea>
+			</label><br>
 			<input type = "submit" value = "Send email to me!">
 		</form> 
 	</div>
 	<div class="mylocation">
-		<p>Home location</p>
+		<br><br>
 		<div id="map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.048942400471!2d-83.71221887120117!3d42.29882109575965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883cae82ce1476a3%3A0x315ce8775eb31864!2s1423+McIntyre+St%2C+Ann+Arbor%2C+MI+48105!5e0!3m2!1szh-CN!2sus!4v1459651686805" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.048942400471!2d-83.71221887120117!3d42.29882109575965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883cae82ce1476a3%3A0x315ce8775eb31864!2s1423+McIntyre+St%2C+Ann+Arbor%2C+MI+48105!5e0!3m2!1szh-CN!2sus!4v1459651686805" allowfullscreen></iframe>
 		</div>
 	</div>
 </div>

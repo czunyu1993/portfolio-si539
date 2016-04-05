@@ -7,20 +7,14 @@ html {
     transition: background-color 1s;
 }
 html, body {
-    /* For the loading indicator to be vertically centered ensure */
-    /* the html and body elements take up the full viewport */
     min-height: 100%;
 }
 html.loading {
-    /* Replace #333 with the background-color of your choice */
-    /* Replace loading.gif with the loading image of your choice */
-    background-color: #ffffff;
-    background-image: url("/img/loading.gif");
+    background-color: white;
+    background-image: url("/img/load.gif");
     background-repeat: no-repeat;
     background-position: center;
     margin: auto;
-
-    /* Ensures that the transition only runs in one direction */
     -webkit-transition: background-color 0;
     transition: background-color 0;
 }
@@ -29,12 +23,25 @@ body {
     transition: opacity 1s ease-in;
 }
 html.loading body {
-    /* Make the contents of the body opaque during loading */
-    opacity: 0;
-
-    /* Ensures that the transition only runs in one direction */
+    opacity: 0.5;
     -webkit-transition: opacity 0;
     transition: opacity 0;
+}
+
+#loadingpage {
+    width: 100%;
+    height: 10000px;
+    background-color: white;
+    display: block;
+    z-index: 99;
+}
+
+#loading-image {
+    width: 200px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    z-index: 100;
 }
 
 
@@ -51,6 +58,8 @@ header {
 #tablet-carousel {display: none;}
 #tablet-self-intro {display: none;}
 #self-mobile {display: none;}
+.self-mobile-div {display: none; }
+.musthidden {visibility: hidden; }
 
 
 .large-nav {
@@ -107,6 +116,8 @@ header {
 #large-heading-content > h2 {font-size: 24pt;}
 #large-heading-content > p {font-size: 18pt;}
 
+.needmargin {margin-top:60px;}
+
 .myname {
   font-family: 'Tangerine';
   font-weight: bold;
@@ -124,6 +135,10 @@ header {
 .content {
   display: block;
   width: 100%;
+}
+
+#welcomeline {
+  font-size: 20pt;
 }
 
 .project-content {
@@ -169,32 +184,47 @@ header {
   font-family: "Lora";
 }
 
-.imgtitle {text-align: center; padding-right: 67px;}
+.imgtitle {text-align: center; margin-left: auto; margin-right: auto;}
 
 .hobby-content > div > a {text-decoration: none;}
 
-.hobbyimg {height: 200px; margin-bottom: 40px;}
+.hobbyimg {height: 200px; margin-bottom: 40px; display: block; margin-left: auto; margin-right: auto;}
 
 #info-cooking, #info-ukulele, #info-travel, #info-badminton, #info-minecraft, #info-wow, 
 #info-hearthstone, #info-hyouka, #info-lovelive {
   display: none;
-  width: 180px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  position: absolute;
-  bottom: 90px;
-  margin-left: 10px;
+  position: relative;
+  bottom: 175px;
   color: black;
 }
 
-#contact-welcome {
-  text-align: center;
-  margin-bottom: 30px;
+.hobbydiv {
+  height: 290px;
 }
+
 
 #contact-info {
   font-size: 12pt;
   display: inline-block;
   vertical-align: top;
+  text-align: left;
+  padding-top: 20px;
+  margin-left: 6%;
+  margin-right: 6%;
+  font-family: 'Lora';
+}
+
+
+#yourname, #yourmesg, #yourmail {
+  width: 150px;
+}
+
+#mesginput {
+  height: 200px;
 }
 
 #map {
@@ -202,9 +232,22 @@ header {
   height: 300px;
 }
 
+#map > iframe {
+  width: 300px;
+  height: 300px;
+  frameborder: 0;
+  border: 0;
+}
+
 .mylocation {
+  padding-top: 20px;
   display: inline-block;
   margin-left: 10%;
+}
+
+
+.glyphicon {
+  padding-right: 10px;
 }
 
 /****** footer part - fullsize view ******/
@@ -250,19 +293,15 @@ footer {
 
 .btn-facebook {color: #ffffff;background-color: #3b5998;}
 .btn-facebook:hover {color: #ffffff;background-color: #2d4373;}
-.btn-facebook:active {color: #ffffff;background-color: #23345a;}
 
 .btn-twitter {color:#ffffff;background-color:#55acee;}
 .btn-twitter:hover {color:#ffffff;background-color:#2795e9;}
-.btn-twitter:active {color:#ffffff;background-color:#1583d7;}
 
 .btn-linkedin {color:#ffffff;background-color:#007bb6;}
 .btn-linkedin:hover {color:#ffffff;background-color:#005983;}
-.btn-linkedin:active {color:#ffffff;background-color:#00405f;}
 
 .btn-github {color: #ffffff;background-color: #444444;}
 .btn-github:hover {color:#fff;background-color:#2b2b2b;}
-.btn-github:active {color:#fff;background-color:#191919;}
 
 
 #large-carouse {
@@ -353,6 +392,12 @@ footer {
     display: inline-block;
     text-align: center;
     vertical-align: text-top;
+    font-family: 'Lora';
+    font-size: 18pt;
+  }
+
+  #welcomeline {
+    font-size: 20pt;
   }
 
   #tablet-carousel {
@@ -384,15 +429,20 @@ footer {
   #large-header, #tablet-header {display: none;}
   #mobile-header {display: block;}
   #large-carouse {display: none;}
-  #self-mobile {display: block; width: 80%}
+  #self-mobile {display: block; width: 80%; display: block; margin-left: auto; margin-right: auto;}
   #mobile-heading-content > h1 {margin-top: 20px;}
   .mylocation {margin-left: 0px;}
-  .self-mobile-p {text-align: center;}
+  .self-mobile-div {display: block; text-align: center; }
 
   header {
     position: relative;
     bottom: 21px;
     height: 150px;
+  }
+
+  .self-mobile-div > p {
+    font-family: 'Lora';
+    font-size: 16pt;
   }
 
 
@@ -412,6 +462,18 @@ footer {
   #mobile-heading-content > h1 {font-size: 33pt;}
   #mobile-heading-content > h2 {font-size: 24pt;}
   #mobile-heading-content > p {font-size: 18pt;}
+
+  .mobile-nav-ul {
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    font-family: 'Lora';
+    background-color: #737373;
+  }
+
+  .mobile-nav-ul > li > a {
+    color: white;
+  }
 
   .copyright {
     text-align: center;

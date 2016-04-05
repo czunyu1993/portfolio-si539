@@ -1,10 +1,7 @@
 {% extends "templates/base.html" %}
 
 {% block large_heading %}
-<h1>Project</h1>
-<style type="text/css">
-h1 {margin: 60px;}
-</style>
+<h1 class="needmargin">Project</h1>
 {% endblock %}
 
 {% block tablet_heading %}
@@ -20,25 +17,28 @@ h1 {margin: 60px;}
 
 {% block content %}
 <div class="project-content">
-<p>These are some projects I did:</p>
+<p>These are some projects I did:</p><br>
 <ul>
-	<li>Text Retrieval System Based on Vector Space Model</li>
+	<li>Text Retrieval System Based on Vector Space Model
 	<ul>
 		<li>Designed text tokenizer and other preprocessing fuction in Python.</li>
 		<li>Implemented vector space model on documents data and queries.</li>
-		<li>Generated precision and recall of the retrieval result.</li>
-	</ul><br>
-	<li>Multi-threads Disk Scheduler Design</li>
+		<li>Generated precision and recall of the retrieval result.<br><br></li>
+	</ul>
+	</li>
+	<li>Multi-threads Disk Scheduler Design
 	<ul>
 		<li>Designed multi-threads disk scheduler with mutex and conditional variables in C++.</li>
 		<li>Set up each thread to deal with requests from one source and 1 thread to service I/O requests in SSTS order.</li>
-		<li>Implemented thread library, including thread, mutex, conditional variable.</li>
-	</ul><br>
-	<li>Design of Zombie Game in Command Line</li>
+		<li>Implemented thread library, including thread, mutex, conditional variable.<br><br></li>
+	</ul>
+	</li>
+	<li>Design of Zombie Game in Command Line
 	<ul>
 		<li>Designed a zombie game with priority queue to deal with order of zombies to kill.</li>
-		<li>Implemented 4 kinds of priority queue to satisfy different runtime requirement.</li>
-	</ul><br>
+		<li>Implemented 4 kinds of priority queue to satisfy different runtime requirement.<br><br></li>
+	</ul>
+	</li>
 </ul>
 </div>
 {% endblock %}
